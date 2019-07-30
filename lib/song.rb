@@ -37,6 +37,11 @@ class Song
       return song
   end
 
+  def self.alphabetical(array)
+      sorted = change.sort
+      sorted
+  end
+
   def self.all
     @@all
   end
