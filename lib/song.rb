@@ -48,6 +48,13 @@ class Song
       return song
   end
 
+  def self.create_from_filename(file_name)
+      names = file_name.split("-")
+      song = Song.create(names[1][0..-5].strip)
+      song.artist_name = names[0].strip
+      return song
+  end
+
   def self.all
     @@all
   end
